@@ -1,0 +1,10 @@
+body {
+    font-family: 'Dancing Script', cursive;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(116, 112, 216);
+    font-size: 3rem;
+    font-family: 'Allura', cursive; /* This line applies Allura to the h1 */
+}
