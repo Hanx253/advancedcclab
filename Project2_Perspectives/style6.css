@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #35354F;
+    z-index: -1; /* Ensure background is behind everything else */
+}
+
+.bg-glow {
+    position: fixed;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(#3C6C7C, #35354F 60%);
+    z-index: -1; /* Ensure background glow is also behind everything else */
+}
+
+.flip-card-container {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    margin: 20px;
+    margin-top: 80px;
+    z-index: 2; /* Ensures that the flip card appears above the background */
+}
+
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-container:hover .flip-card {
+    transform: rotateY(180deg); /* <=>  rotateY(.5turn) */
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+}
+
+.flip-card-front {
+    background-color: #333;
+    color: #fff;
+}
+
+.flip-card-back {
+    background-color: #517fa4;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card-back img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+  
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    gap: 20px; /* Adjust based on desired spacing */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2; /* Ensure it's above the background */
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center; /* Center the cards horizontally */
+    gap: 20px; /* Space between each card */
+    flex-wrap: wrap; /* Allow cards to wrap if needed */
+}
+
+.links-container {
+    position: absolute;
+    top: 15%; /* Adjust this value to position the links higher */
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Align the items vertically */
+    gap: 50px; /* Adjust the space between the items */
+    width: auto;
+    z-index: 3; /* Ensure links are above the cards */
+}
+
+.links-container img {
+    width: 40px; /* Adjust based on desired size */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Indicate clickable items */
+}

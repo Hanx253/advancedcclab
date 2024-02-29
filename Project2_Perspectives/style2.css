@@ -1,0 +1,83 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #35354F;
+  z-index: -1; /* Ensure background is behind everything else */
+}
+
+.bg-glow {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(#3C6C7C, #35354F 60%);
+  z-index: -1; /* Ensure background glow is also behind everything else */
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Ensures .flex-container is positioned in the stacking context */
+  z-index: 1; /* Higher than .bg and .bg-glow to ensure it's on top */
+  margin-top: 0px;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.flex-box {
+  width: 150px;
+  height: 250px;
+  background-color: lightblue;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flex-box img {
+  width: 100%; /* Ensures the image width fills the box */
+  height: 100%; /* Ensures the image height fills the box */
+  object-fit: cover; /* Ensures the image covers the box area without distortion */
+  display: block;
+}
+
+.links-container {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Align the items vertically */
+  gap: 50px; /* Space between the items */
+  margin-top: 110px;
+  margin-left: 45px;
+  margin-bottom: 40px;
+}
+
+.links-container img {
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%; /* Ensures the image is responsive and fits its container */
+    height: auto; /* Maintains the image's aspect ratio */
+    z-index: 1; /* Adjust based on desired layering */
+    width: 40px; /* Set to desired width */
+    height: auto; /* 'auto' maintains the aspect ratio */
+    /* Other styles remain the same */
+}

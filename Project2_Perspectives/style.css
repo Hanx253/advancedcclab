@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+  
+  .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #35354F;
+  }
+  
+  .bg-glow {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(#3C6C7C, #35354F 60%);
+  }
+  
+  .footer h4 {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 10px;
+    width: 215px;
+    height: 20px;
+    font-family: Sans-serif;
+    font-weight: 100;
+    color: pink;
+  }
+  
+  .footer h4 a {
+    color: #8CC6EC;
+  }
+  
+  .container {
+    position: relative;
+    width: 276px; /* Adjust based on total width of both wings */
+    height: 200px; /* Adjust as needed */
+    left: 40.5%;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .line:nth-child(1) {
+    display: block;
+    width: 20px; /* From $points */
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #fcd97d; /* From $colors */
+    margin-left: 4px; /* From $points */
+    animation: appear 4s ease-out infinite forwards;
+  }
+  
+  .line:nth-child(2) {
+    display: block;
+    width: 34px; /* Next item from $points */
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #ffd571; /* Next color from $colors */
+    margin-left: 0px; /* Next margin from $points */
+    animation: appear 4s 0.075s ease-out infinite forwards; /* Adjusted animation delay */
+  }
+  
+  .line:nth-child(3) {
+    display: block;
+    width: 48px; /* And so on... */
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #faae7a; /* And so on... */
+    margin-left: 4px; /* And so on... */
+    animation: appear 4s 0.15s ease-out infinite forwards; /* Adjusted animation delay */
+  }
+
+  .line:nth-child(4) {
+    display: block;
+    width: 62px;
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #fac29f;
+    margin-left: 8px;
+    animation: appear 4s 0.225s ease-out infinite forwards;
+  }
+  
+  .line:nth-child(5) {
+    display: block;
+    width: 74px;
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #f9a58d;
+    margin-left: 14px;
+    animation: appear 4s 0.3s ease-out infinite forwards;
+  }
+  
+  .line:nth-child(6) {
+    display: block;
+    width: 82px;
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #f8b4b5;
+    margin-left: 16px;
+    animation: appear 4s 0.375s ease-out infinite forwards;
+  }
+  
+  .line:nth-child(7) {
+    display: block;
+    width: 86px;
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #f8bbc3;
+    margin-left: 20px;
+    animation: appear 4s 0.45s ease-out infinite forwards;
+  }
+  
+  .line:nth-child(8) {
+    display: block;
+    width: 92px;
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #f7acc0;
+    margin-left: 24px;
+    animation: appear 4s 0.525s ease-out infinite forwards;
+  }
+  
+  .line:nth-child(9) {
+    display: block;
+    width: 94px;
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #f9ced7;
+    margin-left: 28px;
+    animation: appear 4s 0.6s ease-out infinite forwards;
+  }
+  
+  .line:nth-child(10) {
+    display: block;
+    width: 102px;
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #f4a4c1;
+    margin-left: 26px;
+    animation: appear 4s 0.675s ease-out infinite forwards;
+  }
+  
+  .line:nth-child(11) {
+    display: block;
+    width: 60px; /* From $points */
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #f09abf; /* From $colors */
+    margin-left: 60px; /* From $points, adjusted for visual */
+    animation: appear 4s 0.75s ease-out infinite forwards;
+  }
+  
+  .line:nth-child(12) {
+    display: block;
+    width: 78px;
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #f0b1d0;
+    margin-left: 50px;
+    animation: appear 4s 0.825s ease-out infinite forwards;
+  }
+  
+  .line:nth-child(13) {
+    display: block;
+    width: 94px;
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #efbad6;
+    margin-left: 38px;
+    animation: appear 4s 0.9s ease-out infinite forwards;
+  }
+  
+  .line:nth-child(14) {
+    display: block;
+    width: 98px;
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #e3cae0;
+    margin-left: 32px;
+    animation: appear 4s 0.975s ease-out infinite forwards;
+  }
+  
+  .line:nth-child(15) {
+    display: block;
+    width: 98px;
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #c6a1cc;
+    margin-left: 30px;
+    animation: appear 4s 1.05s ease-out infinite forwards;
+  }
+  
+  .line:nth-child(16) {
+    display: block;
+    width: 94px;
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #ded1e5;
+    margin-left: 32px;
+    animation: appear 4s 1.125s ease-out infinite forwards;
+  }
+  
+  .line:nth-child(17) {
+    display: block;
+    width: 84px;
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #aeb2d8;
+    margin-left: 38px;
+    animation: appear 4s 1.2s ease-out infinite forwards;
+  }
+  
+  .line:nth-child(18) {
+    display: block;
+    width: 74px;
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #cbd2ec;
+    margin-left: 44px;
+    animation: appear 4s 1.275s ease-out infinite forwards;
+  }
+  
+  .line:nth-child(19) {
+    display: block;
+    width: 58px;
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #adc5e7;
+    margin-left: 54px;
+    animation: appear 4s 1.35s ease-out infinite forwards;
+  }
+  
+  .line:nth-child(20) {
+    display: block;
+    width: 32px; /* From $points */
+    height: 10px;
+    border-radius: 20em;
+    box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 0.5);
+    background: #8cc6ec; /* From $colors */
+    margin-left: 74px; /* Adjusted for visual consistency */
+    animation: appear 4s 1.425s ease-out infinite forwards;
+  }  
+
+  .wing {
+    position: absolute;
+    top: 0;
+  }
+  
+  .left-wing {
+    left: 0;
+  }
+  
+  .right-wing {
+    right: 0;
+    transform: scaleX(-1);
+  }
+  
+  @keyframes appear {
+    10% {
+      transform: rotateX(90deg);
+    }
+    15% {
+      transform: rotateX(360deg);
+    }
+    100% {
+      transform: rotateX(360deg);
+    }
+  }
+
+
+  .headline {
+    position: absolute;
+    top: 77%;
+    left: 49.75%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    font-family: 'Allura', cursive; /* Using the Google font you've included */
+    color: #ffffff; /* Default color */
+    text-decoration: none; /* Removes underline from links */
+    z-index: 2; /* Ensures it's above the butterfly wings */
+}
+
+.headline:hover {
+    color: #f09abf; /* Color changes on hover */
+}
+
+.links-container {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Align the items vertically */
+  gap: 50px; /* Space between the items */
+  margin-top: 170px;
+  margin-left: 45px;
+}
+
+.links-container img {
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%; /* Ensures the image is responsive and fits its container */
+    height: auto; /* Maintains the image's aspect ratio */
+    z-index: 1; /* Adjust based on desired layering */
+    width: 40px; /* Set to desired width */
+    height: auto; /* 'auto' maintains the aspect ratio */
+    /* Other styles remain the same */
+}
