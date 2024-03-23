@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Homemade Apple';
-    background-image:url(Assets/background4.jpeg);
+    background-image:url(Assets/cmo-oil-lan-82215-1-.jpg);
     background-size: cover; /* Ensures the background covers the entire page */
     background-position: center; /* Centers the background image on the page */
     background-repeat: no-repeat; /* Prevents the background image from repeating */
@@ -22,7 +22,7 @@ body {
     height: 600px;
     padding: 20px; /* Reduced padding from 30px to make margins narrower */
     background: #f0e5dd;
-    border-left: 30px solid #ffa952;
+    border-left: 30px solid #ffaf5f;
     transform: rotate(-45deg) skewX(10deg) scale(.8);
     box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
 }
@@ -50,7 +50,7 @@ body {
     content: "";
     width: 30px;
     height: 100%;
-    background: #d58d36;
+    background: #dc9947;
     position: absolute;
     top: 0;
     left: 0;
