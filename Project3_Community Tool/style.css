@@ -1,0 +1,118 @@
+:root {
+	--brownish: hsla(353, 8%, 40%, 1);
+	--purple: hsla(259, 36%, 47%, 1);
+	--shadow-scale: 1.1;
+	--letter-spacing: 0.3em; /* Adjusted from the original calculation for readability */
+	--initial-skew: -40deg;
+	--hover-skew: -10deg;
+	--animation-duration: 0.3s;
+	--shadow-initial-skew: 20deg; /* Adjusted based on the original formula */
+	--shadow-hover-skew: -5deg; /* Adjusted based on the original formula */
+  }
+  
+  p {
+	color: #fff;
+	font-family: Avenir Next, Helvetica Neue, Helvetica, Tahoma, sans-serif;
+	font-size: 1em;
+	font-weight: 700;
+  }
+  
+  p span {
+	display: inline-block;
+	position: relative;
+	transform-style: preserve-3d;
+	perspective: 500px;
+	-webkit-font-smoothing: antialiased;
+  }
+  
+  p span::before,
+  p span::after {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: -1px;
+	transform-origin: left top;
+	transition: all ease-out var(--animation-duration);
+	content: attr(data-text);
+  }
+  
+  p span::before {
+	z-index: 1;
+	color: rgba(0, 0, 0, 0.2);
+	transform: scale(var(--shadow-scale), 1) skew(0deg, var(--shadow-initial-skew));
+  }
+  
+  p span::after {
+	z-index: 2;
+	color: var(--purple); /* Choose your background-color variable */
+	text-shadow: -1px 0 1px var(--purple), 1px 0 1px rgba(0, 0, 0, 0.8);
+	transform: rotateY(var(--initial-skew));
+  }
+  
+  p span:hover::before {
+	transform: scale(var(--shadow-scale), 1) skew(0deg, var(--shadow-hover-skew));
+  }
+  
+  p span:hover::after {
+	transform: rotateY(var(--hover-skew));
+  }
+  
+  p span + span {
+	margin-left: var(--letter-spacing);
+  }
+  
+  /* Responsive Font Sizes */
+  @media (min-width: 20em) {
+	p {
+	  font-size: 2em;
+	}
+	p span::before,
+	p span::after {
+	  display: block;
+	}
+  }
+  
+  @media (min-width: 30em) {
+	p {
+	  font-size: 3em;
+	}
+  }
+  
+  @media (min-width: 40em) {
+	p {
+	  font-size: 5em;
+	}
+  }
+  
+  @media (min-width: 60em) {
+	p {
+	  font-size: 8em;
+	}
+  }
+  
+  html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+  }
+  
+  body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--purple); /* Choose your background-color variable */
+  }
+  
+  .link-container {
+    text-align: center; /* Center-align the content */
+    margin-top: 20px; /* Adjust as needed for spacing between the text and the links */
+}
+
+.link-container a {
+    color: #fff; /* White text color */
+    text-decoration: underline; /* Underline to indicate clickable links */
+    font-size: 1em; /* Adjust size as needed */
+    padding: 5px; /* Minimal padding */
+    margin: 10px 0; /* Vertical spacing with no horizontal margin */
+    display: block; /* Make each link a block to ensure it occupies its own line */
+}

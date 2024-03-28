@@ -1,0 +1,21 @@
+.item-expiring {
+    color: red;
+}
+
+.item-expired {
+    color: red;
+    font-weight: bold;
+}
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+}
+
+a:hover {
+    background-color: #45a049; /* Darker green on hover */
+}

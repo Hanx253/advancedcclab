@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expiration Tracker</title>
+    <link rel="stylesheet" href="expiration.css">
+</head>
+<body>
+    <h1>Expiration Tracker</h1>
+    <select id="food-type">
+        <option value="vegetable">Vegetable</option>
+        <option value="meat">Meat</option>
+        <option value="fruit">Fruit</option>
+        <option value="others">Others</option>
+    </select>
+    <input type="text" id="food-item" placeholder="Food Item">
+    <input type="date" id="expiration-date" placeholder="Expiration Date">
+    <button id="add-item">Add Item</button>
+    <ul id="expiration-list"></ul>
+
+    <a href="index.html">Back to Homepage</a>
+    
+    <p id="disclaimer">
+        The date is for reference only, please judge according to the actual situation.
+    </p>
+
+    <script src="expiration.js"></script>
+</body>
+</html>
