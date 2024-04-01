@@ -68,36 +68,52 @@ const recipes = [
     },
 ];
 
-document.getElementById('search-btn').addEventListener('click', function() {
-    const searchInput = document.getElementById('search-input').value.toLowerCase();
-    const filteredRecipes = recipes.filter(recipe => recipe.ingredients.some(ingredient => ingredient.includes(searchInput)));
-    displayRecipes(filteredRecipes);
-});
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-input');
+    const searchBtn = document.getElementById('search-btn');
 
-function displayRecipes(recipes) {
-    const recipesDiv = document.getElementById('recipes');
-    recipesDiv.innerHTML = ''; // Clear any previous results
-    // Only display the container if there are recipes to show
-    recipesDiv.style.display = recipes.length > 0 ? 'block' : 'none';
+    // Function to check input value and toggle button's disabled state
+    function toggleSearchButton() {
+        searchBtn.disabled = searchInput.value.trim() === '';
+    }
 
-    recipes.forEach(recipe => {
-        // Create a new div for each recipe
-        const recipeElement = document.createElement('div');
-        // Set the inner HTML of the div to include the recipe name as a clickable link
-        recipeElement.innerHTML = `
-            <h3><a href="${recipe.link}" target="_blank" rel="noopener noreferrer">${recipe.name}</a></h3>
-            <p>${recipe.description}</p>
-        `;
-        // Append the new div to the recipes container
-        recipesDiv.appendChild(recipeElement);
+    // Initially disable the search button
+    toggleSearchButton();
+
+    // Event listener for input changes to enable/disable the search button
+    searchInput.addEventListener('input', toggleSearchButton);
+
+    searchBtn.addEventListener('click', function() {
+        const input = searchInput.value.toLowerCase().trim();
+        if (!input) return; // If the input is empty, do nothing
+        
+        const filteredRecipes = recipes.filter(recipe => 
+            recipe.ingredients.some(ingredient => ingredient.includes(input))
+        );
+        displayRecipes(filteredRecipes);
     });
-}
-
-
-// Hide recipes initially
-document.getElementById('recipes').style.display = 'none';
-
-// Show recipes div only after search
-document.getElementById('search-btn').addEventListener('click', function() {
-    document.getElementById('recipes').style.display = 'block';
+    
+    function displayRecipes(recipes) {
+        const recipesDiv = document.getElementById('recipes');
+        recipesDiv.innerHTML = ''; // Clear any previous results
+        // Only display the container if there are recipes to show
+        recipesDiv.style.display = recipes.length > 0 ? 'block' : 'none';
+    
+        recipes.forEach(recipe => {
+            const recipeElement = document.createElement('div');
+            recipeElement.innerHTML = `
+                <h3><a href="${recipe.link}" target="_blank" rel="noopener noreferrer">${recipe.name}</a></h3>
+                <p>${recipe.description}</p>
+            `;
+            recipesDiv.appendChild(recipeElement);
+        });
+    }
+    
+    // Hide recipes initially
+    document.getElementById('recipes').style.display = 'none';
+    
+    // Show recipes div only after search
+    searchBtn.addEventListener('click', function() {
+        document.getElementById('recipes').style.display = 'block';
+    });
 });

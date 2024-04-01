@@ -1,21 +1,92 @@
-.item-expiring {
-    color: red;
+body {
+    font-family: 'Exo 2', sans-serif;
+    background-color: rgb(81, 81, 162); /* Set a pleasant background color */
+    color: #fff; /* White text color for contrast */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full height */
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px; /* Space below the title */
+}
+
+select, input[type="text"], input[type="date"] {
+    padding: 10px;
+    margin: 10px 0; /* Spacing around form elements */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    width: 80%;
+    max-width: 300px; /* Ensuring the form elements are not too wide */
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+    color: #fff; /* White text */
+    font-size: 1em;
+}
+
+select:hover, input[type="text"]:hover, input[type="date"]:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly more visible on hover */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Rounded corners for the button */
+    background-color: #ffffff;
+    color: rgb(81, 81, 162); /* Matching the body's background */
+    cursor: pointer; /* Change cursor to indicate clickable */
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover */
+}
+
+button:hover {
+    background-color: #f2f2f2; /* Lighter on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+#expiration-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    width: 100%;
+    max-width: 400px; /* Limiting width for better readability */
+}
+
+#expiration-list li {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background for list items */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    color: #fff; /* White text */
+    text-align: left; /* Align text to the left */
+}
+
+.item-expiring, .item-expired {
+    color: #ff4747; /* Making the expiring/expired items stand out */
 }
 
 .item-expired {
-    color: red;
     font-weight: bold;
 }
+
+#disclaimer {
+    margin-top: 50px; /* Space from the content above */
+    font-size: 0.8em; /* Smaller font size */
+    color: #eee; /* Slightly lighter than pure white for less emphasis */
+}
+
 a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px;
     background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    text-decoration: none; /* No underline */
-    border-radius: 5px; /* Rounded corners */
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 a:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049; /* Darker shade on hover */
 }

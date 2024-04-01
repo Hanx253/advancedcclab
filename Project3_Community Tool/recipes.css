@@ -1,0 +1,87 @@
+body {
+    font-family: 'Exo 2', sans-serif;
+    background-color: rgb(81, 81, 162); /* Set the background color */
+    color: #fff; /* White text for better contrast */
+    text-align: center; /* Center aligns all text in the body */
+    margin: 0; /* Removes default margin */
+    padding: 20px; /* Adds padding to avoid elements sticking to edges */
+    min-height: 100vh; /* Full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-weight: 900; /* Bolder for more emphasis */
+    margin-bottom: 50px; /* Adds space below the heading */
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 80%; /* Responsive width */
+    max-width: 400px; /* Maximum width */
+    border: 2px solid #fff; /* White border */
+    border-radius: 20px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+    color: #fff; /* White text */
+    margin-bottom: 20px; /* Space before the button */
+}
+
+input[type="text"]::placeholder {
+    color: #ddd; /* Lighter color for the placeholder text */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff; /* White background */
+    color: rgb(81, 81, 162); /* Text color to match the body background */
+    cursor: pointer; /* Cursor changes to pointer to indicate it's clickable */
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    margin-bottom: 30px;
+}
+
+button:hover {
+    background-color: rgb(71, 71, 152); /* Darker shade when hovered */
+    color: #fff;
+}
+
+#recipes div {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for cards */
+    margin: 10px auto;
+    padding: 30px;
+    border-radius: 15px; /* Rounded corners for the recipe cards */
+    width: 90%;
+    max-width: 600px; /* Max-width for better layout on larger screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+#recipes div:hover {
+    transform: scale(1.02); /* Slight scale up on hover */
+}
+
+#recipes h3 a {
+    color: rgb(81, 81, 162); /* Using body background color for links */
+    text-decoration: none; /* No underline for cleaner look */
+}
+
+#recipes p {
+    color: rgb(0, 0, 0); /* Dark text for readability */
+    text-align: left; /* Align text to the left for better readability */
+    font-style: italic;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+a:hover {
+    color: #ccc;
+}

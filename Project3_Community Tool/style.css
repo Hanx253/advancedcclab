@@ -1,6 +1,6 @@
 :root {
-	--brownish: hsla(353, 8%, 40%, 1);
-	--purple: hsla(259, 36%, 47%, 1);
+	--brownish: rgb(81, 84, 125);
+	--purple: rgb(81, 81, 162);
 	--shadow-scale: 1.1;
 	--letter-spacing: 0.3em; /* Adjusted from the original calculation for readability */
 	--initial-skew: -40deg;
@@ -90,29 +90,68 @@
 	}
   }
   
-  html, body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-  }
-  
   body {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: var(--purple); /* Choose your background-color variable */
-  }
-  
-  .link-container {
-    text-align: center; /* Center-align the content */
-    margin-top: 20px; /* Adjust as needed for spacing between the text and the links */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: var(--purple); /* Background color */
+}
+
+.icebox-container,
+.link-container {
+    text-align: center; /* Center the text inside the containers */
 }
 
 .link-container a {
     color: #fff; /* White text color */
     text-decoration: underline; /* Underline to indicate clickable links */
-    font-size: 1em; /* Adjust size as needed */
+    font-size: 1.1em; /* Adjust size as needed */
     padding: 5px; /* Minimal padding */
     margin: 10px 0; /* Vertical spacing with no horizontal margin */
-    display: block; /* Make each link a block to ensure it occupies its own line */
+    display: block; /* Ensure each link is on its own line */
+	text-decoration: none;
+}
+
+.link-container a:hover {
+    color: black; /* Changes text color to black on hover */
+}
+
+/* Responsive adjustments for the ICEBOX effect */
+@media (min-width: 20em) {
+    .icebox-container p {
+        font-size: 2em; /* Adjust size based on viewport width */
+    }
+}
+
+@media (min-width: 30em) {
+    .icebox-container p {
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 40em) {
+    .icebox-container p {
+        font-size: 5em;
+    }
+}
+
+@media (min-width: 60em) {
+    .icebox-container p {
+        font-size: 8em;
+    }
+}
+
+body {
+    font-family: 'Exo 2', sans-serif;
+}
+
+/* Or targeting specific elements */
+h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700; /* Example of specifying the weight */
+    font-style: italic; /* Example of applying italic style */
 }
