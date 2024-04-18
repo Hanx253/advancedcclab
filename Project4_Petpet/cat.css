@@ -1,0 +1,45 @@
+body {
+    background: #f8f7f2;
+    padding: 0 10%;
+    font: 100%/1.5 'Kalam', cursive;
+    display: flex;          /* Enables flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center;/* Center vertically */
+    align-items: center;    /* Center horizontally */
+    min-height: 100vh;      /* Full viewport height */
+    margin: 0;              /* Remove default margin */
+}
+
+h1 {
+    margin: 0;
+    line-height: 1;
+    padding: 10px;
+    color: #251b19;
+    width: 100%;           
+    text-align: center;     
+}
+
+p {
+    margin: 0;
+    padding: 10px;
+    color: #251b19;
+    font-size: 1.2em;
+    width: 100%;            
+    text-align: center;    
+}
+
+a {
+    color: #e56633;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#generateCat {
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer;
+}

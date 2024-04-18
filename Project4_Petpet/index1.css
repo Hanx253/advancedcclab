@@ -1,0 +1,56 @@
+body {
+  background: #f8f7f2;
+  padding: 0 10%;
+  font: 100%/1.5 'Kalam', cursive;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  line-height: 1;
+  padding: 10px;
+  color: #251b19;
+}
+
+p {
+  margin: 0;
+  padding: 10px;
+  color: #251b19;
+  font-size: 1.2em;
+}
+
+a {
+  color: #e56633;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  gap: 50px;
+  border-radius: 10px;
+  margin-top: 10%;
+}
+
+.box {
+  width: 240px;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+  transform: scale(1.2);
+}
